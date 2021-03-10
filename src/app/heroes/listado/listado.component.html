@@ -1,0 +1,16 @@
+<h3>Listado de heroes</h3>
+<button (click)='borrarHeroe()'>Borrar</button>
+<div *ngIf = "heroeBorrado ; else noBorrado "><!--Como la variable heroeBorrado inicializa vacia, para el sistema es equivalente a un false y el código no se mostraria, otra forma de hacerlo seria: *ngIf = "heroeBorrado !== ''"-->
+    <h3>Heroe Borrado: <small>{{heroeBorrado}}</small></h3>
+</div>
+<ng-template #noBorrado>
+    <h3>No ha borrado nada</h3>
+</ng-template>
+<ul>
+    <li *ngFor="let heroe of heroes">
+         {{heroe}}
+    </li>
+</ul>
+
+
+
