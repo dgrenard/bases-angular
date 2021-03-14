@@ -1,0 +1,8 @@
+<h3>Personajes</h3>
+         <hr>
+        <!--  <ul *ngFor='let personaje of personajes'>
+            <li>{{personaje}}</li>          
+         </ul> -->
+         <ul *ngFor = 'let personaje of personajes'>
+           <li>{{personaje.nombre}} - {{personaje.poder | number}}</li>  <!--El | number  pone los puntos y comas en un numero, por ejemplo 15.000 en vez de 15000-->   
+         </ul>
