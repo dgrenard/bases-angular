@@ -1,0 +1,23 @@
+<h3>Agregar {{nuevo.nombre}}</h3>
+<hr>
+<form (ngSubmit)="agregar()"> <!-- Tambien se podria usar el meodo de javascrypt <form (submit)="agregar($event)"> -->
+    <input 
+    type="text" 
+    placeholder="Nombre"
+    name="Nombre"
+    [(ngModel)]="nuevo.nombre"
+    />  
+    <!-- Ejemplo de two way data biding linea 24 poru emite y escucha a la vez-->
+   <!--Cuando se usan parentesis dentro de las llaves cuadradas en el ngModel, le estamos indicando al angular que queremos tanto escuchar como emitir el evento -->
+   <!-- Las llaves cuadradas con para establecer una propiedad en el objeto, lo parentesis para emitir o escuchar un evento -->
+   <!--  [value] = "nuevo.nombre" 
+    (input) = "cambiarNombre($event)" Esta seria una forma clasica para reemplazar al ngModel -->
+    <input 
+    type="text"
+     placeholder="Poder"
+     [value] = "nuevo.poder"
+     name="poder"
+     [(ngModel)]="nuevo.poder"
+     />
+    <button>Agregar</button>
+</form>

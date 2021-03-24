@@ -19,22 +19,13 @@ export class MainPageComponent {
      poder: 7500           
    }
 ];
-  
-  nuevo: Personaje = {
-    nombre: '',
-    poder: 0
+  nuevo:Personaje ={
+     nombre:'Maestro Roshi',
+     poder: 1000
   }
-  agregar(){
-    if ( this.nuevo.nombre.trim().length === 0 ){
-      return;
-    }
-     this.personajes.push(this.nuevo); //Forma de agregar un valor a un array
-     this.nuevo = {
-       nombre:'',
-       poder: 0
-     };
+  agregarNuevoPersonaje(argumento:Personaje){
+    this.personajes.push(argumento);
   }
-
   /*agregar( event:any){ metodo clasico con Javascypt
     event.preventDefault();
     console.log(event);
