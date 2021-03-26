@@ -8,23 +8,16 @@ import { Personaje } from '../interfaces/dbz.interface';
 })
 export class MainPageComponent {
  
+  constructor( ){ }
   // personajes:string[] = ['Krilin-700','Goku-1500','Vegeta-800'];
- personajes:Personaje []= [
-   {
-      nombre:'Goku',
-      poder: 15000
-   },
-   {  
-     nombre:'Vegeta',   
-     poder: 7500           
-   }
-];
+  //Forma de traerse los datos por medio de un get.
+  /* get personajes():Personaje[]{
+        return this.dbzService.personajes;
+  } */
+  
   nuevo:Personaje ={
      nombre:'Maestro Roshi',
      poder: 1000
-  }
-  agregarNuevoPersonaje(argumento:Personaje){
-    this.personajes.push(argumento);
   }
   /*agregar( event:any){ metodo clasico con Javascypt
     event.preventDefault();
